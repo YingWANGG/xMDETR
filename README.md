@@ -2,7 +2,7 @@
 
 We propose xMDETR, a multi-lingual grounded vision-language model based on the state-of-the-art model [MDETR](https://github.com/ashkamath/mdetr), by adapting it to new languages without machine-translated data, while also keeping most of the pre-trained weights frozen (only the embedding layer and adapters in the text encoders are updated).
 
-![image](https://github.com/YingWANGG/xMDETR/blob/main/diagram.pdf)
+![image](https://github.com/YingWANGG/xMDETR/blob/main/diagram.png)
 There are two or three streams of data in the proposed cross-lingual transfer. The first stream only includes textual data in the target language and is fed to the text encoder to compute the MLM loss. The second stream consists of images from GQA and corresponding code-switched questions, fed into pre-trained MDETR for QA loss. For languages with existing image-caption datasets (such as German and Chinese), we have an additional data stream to compute the contrastive loss.
 
 For more details, please see the paper: [Adapting Grounded Visual Question Answering Models to Low Resource Languages](https://openaccess.thecvf.com/content/CVPR2023W/MULA/papers/Wang_Adapting_Grounded_Visual_Question_Answering_Models_to_Low_Resource_Languages_CVPRW_2023_paper.pdf) by Ying Wang, Jonas Pfeiffer, Nicolas Carion, Yann LeCun; Aishwarya Kamath.
