@@ -1,0 +1,1 @@
+Put GQA annotation files (to obtain theses files, see [MDETR]([https://github.com/ashkamath/mdetr](https://github.com/ashkamath/mdetr/blob/main/.github/pretrain.md)https://github.com/ashkamath/mdetr/blob/main/.github/pretrain.md)) here.
