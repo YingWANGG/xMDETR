@@ -11,10 +11,12 @@ For more details, please see the paper: [Adapting Grounded Visual Question Answe
 We provided [checkpoints](https://drive.google.com/drive/folders/1tcYUfkEYGR2fGH1l0F--x8x2uN000hqk?usp=sharing) trained with MLM and code-switch QA (and contrastive loss if applicable). The test accuracy is reported as zero-shot results in the paper. 
 
 ### Data Preparation
-1. Update the path of the GQA dataset in gqa.json. "vg_img_path" should point to the directory where GQA images are stored. The GQA annotation files (to obtain theses files, see [MDETR](https://github.com/ashkamath/mdetr)) should be stored in the folder ```annotations```.
+1. Update the path of the GQA dataset in gqa.json. "vg_img_path" should point to the directory where GQA images are stored. The GQA annotation files (to obtain these files, see [MDETR](https://github.com/ashkamath/mdetr/blob/main/.github/pretrain.md)) should be stored in the folder ```annotations```.
 2. Obtain annotation files from [xGQA](https://github.com/Adapter-Hub/xGQA). Store them under ```annotations/fewshot```.
-   
+
+
 ### Training (MLM + code-switch QA)
+To facilitate training and evaluation, we provided a copy of a subset of MDETR code in this repo. The code for the model and dataloader has been modified for cross-lingual transfer implemented in this repo.
 1. We have provided bilingual dictionaries for each language from xGQA in ```data/fasttext/```. The word-level translations are based on bilingual dictionaries from [MUSE](https://github.com/facebookresearch/MUSE), and then we use Google Translate to obtain translations for those words that are not present in MUSE but are included in the annotations of the GQA training split.
 2. Download text datasets (e.g. OSCAR) or use HuggingFace's datasets library. Change <mlm_dir> in the command below.
 3. Run the command below.
