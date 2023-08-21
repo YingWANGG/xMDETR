@@ -1,0 +1,16 @@
+numpy
+torch>=1.7.0
+torchvision>=0.6.0
+cython
+scipy
+xmltodict
+tqdm
+adapter-transformers==2.0.1
+datasets
+onnx
+onnxruntime
+prettytable
+submitit
+timm==0.5.4
+git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI&egg=pycocotools
+git+https://github.com/cocodataset/panopticapi.git#egg=panopticapi
